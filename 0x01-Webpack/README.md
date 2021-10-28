@@ -1,0 +1,1 @@
+This is the folder to resolve the **0x01-Webpack** project at Holberton School 
