@@ -1,0 +1,1 @@
+Folder to resolve the **0x02. React intro** project
