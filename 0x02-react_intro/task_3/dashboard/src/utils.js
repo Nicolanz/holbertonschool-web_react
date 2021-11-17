@@ -12,7 +12,11 @@ function getFooterCopy(isIndex) {
 }
 
 function getLatestNotification() {
-    return `<strong>Urgent requirement</strong> - complete by EOD`
+    return `<strong>Urgent requirement</strong> - complete by EOD`;
 }
 
-module.exports = { getFullYear, getFooterCopy, getLatestNotification }
+module.exports = {
+    getFullYear,
+    getFooterCopy,
+    getLatestNotification 
+}
