@@ -11,6 +11,8 @@ describe('getFullYear', () => {
 describe('getFooterCopy', () => {
     it('must return correct string on bool argument', () => {
         expect(utils.getFooterCopy(true)).toEqual('Holberton School');
+    });
+    it('must return correct string on bool argument', () => {
         expect(utils.getFooterCopy(false)).toEqual('Holberton School main dashboard');
     });
 });

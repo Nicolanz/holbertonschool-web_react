@@ -6,13 +6,13 @@ const utils = require('./utils.js');
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
           School dashboard
         </h1>
-      </header>
-      <body className="App-body">
+      </div>
+      <div className="App-body">
         <p>
           Login to access the full dashboard
         </p>
@@ -23,14 +23,12 @@ function App() {
           <input type="text" id="password" name="password" />
           <button>OK</button>
         </div>
-
-
-      </body>
-      <footer className="App-footer">
+      </div>
+      <div className="App-footer">
         <p>
           Copyright {utils.getFullYear()} - {utils.getFooterCopy(true)}
         </p>
-      </footer>
+      </div>
     </div>
   );
 }
