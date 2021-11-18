@@ -1,4 +1,3 @@
-
 import logo from './holberton_logo.jpeg';
 import './App.css';
 const utils = require('./utils.js');

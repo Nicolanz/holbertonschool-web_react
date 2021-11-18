@@ -6,7 +6,6 @@ const utils = require('./utils.js');
 const logClose = () => {
     console.log('Close button has been clicked');
 }
-
 function Notify () {
     return (
         <div className="Notifications">
