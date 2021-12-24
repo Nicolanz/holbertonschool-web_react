@@ -1,0 +1,77 @@
+
+/* variables */
+:root{
+  --red-color1: #E0354C;
+  --red-color2: #E03548;
+  --red-color3: #E33E55;
+  --red-color3: #EA3E5F;
+  --font-arial: Arial, Helvetica, sans-serif;
+}
+
+/* general styles */
+*, body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body :not('App-body'){
+  min-height: auto;
+}
+
+/* main div styles */
+.App {
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* header styles */
+div.App-header{
+  width: 95%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: center;
+  border-bottom: 4px solid var(--red-color2);
+}
+
+div.App-header .App-logo{
+  height: 150px;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+div.App-header h1{
+  font-family: var(--font-arial);
+  color: var(--red-color1);
+}
+
+div.App-body{
+  height: 200px;
+  padding: 70px 0px 0px 70px;
+  font-family: var(--font-arial);
+}
+
+/* credentials styles */
+div.App-body .credentials{
+  margin-top: 10px;
+}
+div.App-body .credentials *{
+  margin: 5px;
+}
+
+div.App-footer{
+  width: 95%;
+  margin-top: auto;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-family: var(--font-arial);
+  font-weight: lighter;
+  font-style: italic;
+  border-top: 4px solid var(--red-color2);
+}
