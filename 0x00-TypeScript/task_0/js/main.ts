@@ -6,14 +6,14 @@ interface Student {
     location: string;
 }
 
-const student1: Student = {
-  name: "Nicolas",
+let student1: Student = {
+  firstname: "Nicolas",
   lastName: "Zarate",
   age: 22,
   location: "Medellin",
 };
-const student2: Student = {
-  name: "Wilson",
+let student2: Student = {
+  firstname: "Wilson",
   lastName: "Lopez",
   age: 30,
   location: "Bogota",
@@ -22,29 +22,40 @@ const student2: Student = {
 let studentsList: Student[] = [student1, student2];
 
 const body = document.getElementsByTagName("body")[0];
-let table = document.createElement("TABLE");
+let table = document.createElement("table");
 
-table.setAttribute("id", "myTable");
-table = document.getElementById("myTable");
+let newTr = document.createElement('tr');
+let newTh = document.createElement('th');
+let text = document.createTextNode('Firstname');
 
-let tr = document.createElement("TR");
-tr.setAttribute("id", "myTr");
-tr = document.getElementById("myTr");
+newTh.appendChild(text);
+newTr.appendChild(newTh);
 
-const name = document.createElement("TH");
-const location = document.createElement("TH");
+newTh = document.createElement('th');
+text = document.createTextNode('Location');
 
-name.appendChild(document.createTextNode("Name"));
-location.appendChild(document.createTextNode("Location"));
+newTh.appendChild(text);
+newTr.appendChild(newTh);
 
-tr.appendChild(name);
-tr.appendChild(location);
-tr.removeAttribute("id");
+table.appendChild(newTr);
+let newTd;
 
-for (const i of studentsList){
-    newTr = document.createElement("TR");
-    tr.setAttribute("id", "myTr");
-    tr = document.getElementById("myTr");
+for (let i = 0; i < studentsList.length; i++) {
+  newTr = document.createElement('tr');
+  text = document.createTextNode(studentsList[i].firstname);
+  newTd = document.createElement('td');
+
+  newTd.appendChild(text);
+  newTr.appendChild(newTd);
+  
+  newTd = document.createElement('td');
+  text  = document.createTextNode(studentsList[i].location);
+  
+  newTd.appendChild(text);
+  newTr.appendChild(newTd);
+
+  table.appendChild(newTr);
 }
-getElementsByTagName("body")[0]
-body.appendChild(p);
+
+table.appendChild(newTr);
+body.appendChild(table);
