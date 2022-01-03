@@ -1,4 +1,5 @@
 
+// Teacher interface
 interface Teacher {
     readonly firstName: string;
     readonly lastName: string;
@@ -8,16 +9,34 @@ interface Teacher {
     location: string;
 }
 
+// Directors interface which extends teacher
 interface Directors extends Teacher {
   numberOfReports: number;
 }
 
+// printTeacher function
 function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
 
+// printTeacherFunction interface for the printTeacher function
 interface printTeacherFunction {
   (firstname: string, lastName: string): string;
+}
+
+class StudentClass {
+  firstName: string;
+  lastName: string;
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  workOnHomework(){
+    return `Currently working`;
+  }
+  displayName(){
+    return this.firstName;
+  }
 }
 
 // objs and functionality examples
